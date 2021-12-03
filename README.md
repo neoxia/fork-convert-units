@@ -1,7 +1,7 @@
-convert-units
+fork-convert-units
 =============
 
-[![Downloads](https://img.shields.io/npm/dm/convert-units.svg)](https://www.npmjs.com/package/convert-units)
+[![Downloads](https://img.shields.io/npm/dm/fork-convert-units.svg)](https://www.npmjs.com/package/fork-convert-units)
 
 A handy utility for converting between quantities in different units.
 
@@ -9,24 +9,24 @@ Installation
 -----
 
 ```bash
-npm install convert-units --save
+npm install fork-convert-units --save
 ```
 
 ```bash
 # beta builds are also available with
-npm install convert-units@beta --save
+npm install fork-convert-units@beta --save
 ```
 
 Usage
 -----
 
-`convert-units` has a simple chained API that is easy to read. It can also be configured with the measures that are packaged with it or custom measures.
+`fork-convert-units` has a simple chained API that is easy to read. It can also be configured with the measures that are packaged with it or custom measures.
 
 The code snippet below shows everything needed to get going:
 
 ```js
 // `allMeasures` includes all the measures packaged with this library
-import configureMeasurements, { allMeasures } from 'convert-units';
+import configureMeasurements, { allMeasures } from 'fork-convert-units';
 
 const convert = configureMeasurements(allMeasures);
 ```
@@ -34,7 +34,7 @@ const convert = configureMeasurements(allMeasures);
 It's also possible to limit the measures configured. This allows for smaller packages when using a bundler like `webpack` or `rollup`:
 
 ```js
-import configureMeasurements, { volume, mass, length } from 'convert-units';
+import configureMeasurements, { volume, mass, length } from 'fork-convert-units';
 
 /*
   `configureMeasurements` is a closure that accepts a directory
@@ -729,7 +729,7 @@ import configureMeasurements, {
   LengthSystems,
   LengthUnits,
   Measure
-} from 'convert-units';
+} from 'fork-convert-units';
 
 type NewLengthUnits = LengthUnits | 'px';
 const DPI = 96;
@@ -770,7 +770,7 @@ This only applies if moving from `<=2.3.4` to `>=3.x`.
  
 `index.js`
 ```js
-import convert from 'convert-units';
+import convert from 'fork-convert-units';
 
 convert(1).from('m').to('mm');
 convert(1).from('m').to('ft');
@@ -788,7 +788,7 @@ convert(1).from('m').to('ft');
 
 `convert.js`
 ```js
-import configureMeasurements, { allMeasures } from 'convert-units';
+import configureMeasurements, { allMeasures } from 'fork-convert-units';
 
 export default configureMeasurements(allMeasures);
 ```
@@ -806,7 +806,7 @@ import configureMeasurements, {
   length,
   LengthSystems,
   LengthUnits,
-} from 'convert-units';
+} from 'fork-convert-units';
 
 // Measures: The names of the measures being used
 type Measures = 'length' | 'area';
@@ -834,7 +834,7 @@ import configureMeasurements, {
   length,
   LengthSystems,
   LengthUnits,
-} from 'convert-units';
+} from 'fork-convert-units';
 
 // Measures: The names of the measures being used
 type Measures = 'length' | 'area';
@@ -860,7 +860,7 @@ import configureMeasurements, {
   allMeasures,
   AllMeasuresSystems,
   AllMeasuresUnits,
-} from 'convert-units';
+} from 'fork-convert-units';
 
 const convertAll = configureMeasurements<
   AllMeasures,
@@ -875,7 +875,7 @@ convertAll(4).from('m2').to('cm2');
 Request Measures & Units
 -----------------------
 
-All new measures and additional units are welcome! Take a look at [`src/definitions`](https://github.com/convert-units/convert-units/tree/main/src/definitions) to see some examples.
+All new measures and additional units are welcome! Take a look at [`src/definitions`](https://github.com/fork-convert-units/fork-convert-units/tree/main/src/definitions) to see some examples.
 
 Packaged Units
 --------------
